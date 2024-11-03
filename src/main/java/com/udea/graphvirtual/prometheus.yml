@@ -1,0 +1,8 @@
+global:
+  scrape_internal: 15s
+
+scrape_configs:
+  - job_name: 'spring-actuator'
+    metrics_path: '/actuator/prometheus'
+    static_configs:
+      - targets: ['graphvirtual:8080']
